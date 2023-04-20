@@ -1,0 +1,198 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5%;
+
+  --color-timer:#323238;
+  
+  --color-hover:#919194;
+
+  --color-press:#02799D;
+  --color-press-hover:#036685;
+
+}
+
+body{
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+main{
+  display: flex; 
+  align-items: center;
+}
+ /* Box-Timer */
+span{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12.6166rem;
+  line-height: 14.8rem;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: var(--color-timer);
+}
+
+.timer{
+  margin-bottom: 4.8rem;
+}
+
+.button-timer {
+
+  display: flex;
+  gap: 4rem;
+
+}
+
+.button-timer button{
+  
+  width: 4.8rem;
+  height: 4.8rem;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+/* box-button */
+
+.box-button{
+  
+  display: grid;
+  gap: 3.2rem;
+  grid-template-columns: 1fr 1fr;
+
+  margin-left: 19.2rem;
+}
+
+.box-button button{
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+.box-button button:hover path:nth-child(1){
+  fill: var(--color-hover);
+  transition-delay: 50ms;
+}
+
+
+.box-button .press path:nth-child(1){
+  fill:var(--color-press) ;
+}
+.box-button .press path:nth-child(2){
+  fill:white ;
+}
+.box-button .press:hover path:nth-child(1){
+  fill:var(--color-press-hover);
+  transition-delay: 50ms;
+}
+.box-button .press path:nth-child(2){
+  fill:white ;
+}
+
+/* Luz and dark */
+
+.luz , .dark{
+  position: absolute;
+  right: 5rem;
+  top: 5rem;
+  cursor: pointer;
+}
+
+.hide{
+  display: none;
+}
+.darkMode{
+  background: black;
+}
+
+
+
+.darkMode .box-timer path:nth-child(n){
+  fill: white;
+}
+.darkMode .box-button path:nth-child(1){
+  fill: #29292E;
+}
+.darkMode .box-button path:nth-child(2){
+  fill: #9a9aa6;
+}
+.darkMode span{
+  color: white;
+}
+
+.darkMode .box-button button:hover path:nth-child(1){
+  fill: #1e1e22;
+}
+
+.darkMode .box-button .pressDark path:nth-child(1){
+  fill:#0A3442;
+}
+.darkMode .box-button .pressDark path:nth-child(2){
+  fill:white;
+}
+.darkMode .box-button .pressDark:hover path:nth-child(1){
+  fill:#06212a;
+}
+
+input{
+  position: absolute;
+  bottom: 2rem;
+  left: 1.5rem;
+
+  width: 80%;
+
+  -webkit-appearance: none;
+
+  background: #323238;
+  border-radius: .9rem;   
+  height: .6rem;
+}
+
+input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%; 
+
+  background: #323238;
+  cursor: pointer;
+}
+.press input{
+  background: white;
+}
+.press input::-webkit-slider-thumb {
+  background: white;
+}
+.darkMode input{
+  background: white;
+}
+.darkMode input::-webkit-slider-thumb {
+  background: white;
+}
+
+
+.nature{
+  position: relative;
+}
+.chuva{
+  position: relative;
+}
+.lareira{
+  position: relative;
+}
+.cafeteira{
+  position: relative;
+}
+
